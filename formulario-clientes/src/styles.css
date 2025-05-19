@@ -1,0 +1,196 @@
+/* Importa la fuente Roboto */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* Nueva paleta pastel: fondo #f6f6f6, primario #b2c9ab, secundario #f7d9c4, acento #a5a58d, textos #444 */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container, .form-container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-container, .container {
+    max-width: 650px;
+    margin: 32px auto;
+    padding: 32px 28px;
+}
+
+h1 {
+    text-align: center;
+    color: #a5a58d;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    color: #a5a58d;
+    letter-spacing: 0.5px;
+    word-break: break-word;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    margin-bottom: 12px;
+    border: 1.5px solid #b2c9ab;
+    border-radius: 8px;
+    background: #f7fafc;
+    font-size: 14px;
+    color: #444;
+    transition: border-color 0.2s;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+textarea {
+    min-height: 36px;
+    max-height: 80px;
+    resize: vertical;
+}
+
+input[type="checkbox"] {
+    accent-color: #f7d9c4;
+    margin-right: 10px;
+    transform: scale(1.15);
+}
+
+.section {
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #b2c9ab;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.button,
+button[type="button"] {
+    width: 100%;
+    max-width: 320px;
+    min-width: 120px;
+    background: linear-gradient(90deg, #b2c9ab 0%, #f7d9c4 100%);
+    color: #444;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(165, 165, 141, 0.10);
+    transition: background 0.2s, transform 0.1s, color 0.2s;
+    margin-top: 18px;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+    border: 2px solid #a5a58d;
+}
+
+.button:hover, .button:focus {
+    background: linear-gradient(90deg, #f7d9c4 0%, #b2c9ab 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    border-color: #b2c9ab;
+}
+
+button[type="button"] {
+    background: linear-gradient(90deg, #b2c9ab 0%, #f7d9c4 100%);
+    color: #444;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 4px 16px rgba(178, 201, 171, 0.12);
+    transition: background 0.2s, color 0.2s, transform 0.1s, box-shadow 0.2s;
+    margin: 28px auto 0 auto;
+    display: block;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: 2px solid #b2c9ab;
+}
+
+button[type="button"]:hover,
+button[type="button"]:focus {
+    background: linear-gradient(90deg, #f7d9c4 0%, #b2c9ab 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(178, 201, 171, 0.18);
+    border-color: #a5a58d;
+}
+
+/* Mejoras responsive */
+@media (max-width: 700px) {
+    .form-container, .container {
+        padding: 16px 4vw;
+        max-width: 98vw;
+        margin: 16px auto;
+    }
+    h1 {
+        font-size: 1.1em;
+        padding: 0 2vw;
+    }
+    label {
+        font-size: 1em;
+    }
+    .button,
+    button[type="button"] {
+        font-size: 1em;
+        padding: 10px 0;
+        max-width: 100%;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    textarea {
+        font-size: 1em;
+        padding: 6px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container, .container {
+        padding: 8px 2vw;
+    }
+    h1 {
+        font-size: 1em;
+    }
+    label {
+        font-size: 0.95em;
+    }
+    .button,
+    button[type="button"] {
+        font-size: 0.95em;
+        padding: 8px 0;
+    }
+}
+
+@media print {
+    .button {
+        display: none;
+    }
+    body {
+        background: #fff;
+    }
+    .form-container {
+        box-shadow: none;
+        border: none;
+    }
+}

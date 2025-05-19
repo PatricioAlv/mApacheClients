@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Análisis de Requerimientos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧾 Análisis de Requerimientos - mApache 🦝</h1>
+        <form id="client-form">
+            <label for="client-name">Cliente:</label>
+            <input type="text" id="client-name" required>
+
+            <label for="meeting-date">Fecha de reunión:</label>
+            <input type="date" id="meeting-date" required>
+
+            <label for="business-name">Nombre del negocio:</label>
+            <input type="text" id="business-name" required>
+
+            <label for="business-sector">Rubro / Actividad:</label>
+            <input type="text" id="business-sector" required>
+
+            <h2>🔹 OBJETIVO PRINCIPAL DE LA WEB</h2>
+            <label><input type="checkbox" name="main-objective" value="Informativa"> Informativa</label>
+            <label><input type="checkbox" name="main-objective" value="Venta online"> Venta online</label>
+            <label><input type="checkbox" name="main-objective" value="Reservas / Turnos"> Reservas / Turnos</label>
+            <label><input type="checkbox" name="main-objective" value="Generar contactos"> Generar contactos</label>
+            <label><input type="text" name="main-objective-other" placeholder="Otro:"></label>
+
+            <h2>🔹 PÚBLICO OBJETIVO</h2>
+            <label for="age">Edad:</label>
+            <input type="text" id="age" required>
+            <label for="location">Ubicación:</label>
+            <input type="text" id="location" required>
+            <label for="characteristics">Características:</label>
+            <textarea id="characteristics" required></textarea>
+
+            <h2>🔹 CONTENIDO Y SECCIONES DESEADAS</h2>
+            <label><input type="checkbox" name="desired-content" value="Inicio"> Inicio</label>
+            <label><input type="checkbox" name="desired-content" value="Nosotros"> Nosotros</label>
+            <label><input type="checkbox" name="desired-content" value="Servicios"> Servicios</label>
+            <label><input type="checkbox" name="desired-content" value="Productos"> Productos</label>
+            <label><input type="checkbox" name="desired-content" value="Testimonios"> Testimonios</label>
+            <label><input type="checkbox" name="desired-content" value="Galería / Portfolio"> Galería / Portfolio</label>
+            <label><input type="checkbox" name="desired-content" value="Contacto"> Contacto</label>
+            <label><input type="checkbox" name="desired-content" value="Tienda online"> Tienda online</label>
+            <label><input type="checkbox" name="desired-content" value="Blog"> Blog</label>
+            <label><input type="text" name="desired-content-other" placeholder="Otro:"></label>
+
+            <h2>🔹 FUNCIONALIDADES</h2>
+            <label><input type="checkbox" name="functionalities" value="Formulario de contacto"> Formulario de contacto</label>
+            <label><input type="checkbox" name="functionalities" value="WhatsApp directo"> WhatsApp directo</label>
+            <label><input type="checkbox" name="functionalities" value="Reservas online"> Reservas online</label>
+            <label><input type="checkbox" name="functionalities" value="Ecommerce / Carrito de compras"> Ecommerce / Carrito de compras</label>
+            <label><input type="checkbox" name="functionalities" value="Integración con redes sociales"> Integración con redes sociales</label>
+            <label><input type="checkbox" name="functionalities" value="Multilenguaje"> Multilenguaje</label>
+            <label><input type="checkbox" name="functionalities" value="Autoadministrable (CMS)"> Autoadministrable (CMS)</label>
+            <label><input type="checkbox" name="functionalities" value="Newsletter"> Newsletter</label>
+            <label><input type="checkbox" name="functionalities" value="Chat en vivo"> Chat en vivo</label>
+            <label><input type="text" name="functionalities-other" placeholder="Otro:"></label>
+
+            <h2>🔹 MATERIAL DISPONIBLE</h2>
+            <label><input type="checkbox" name="available-material" value="Logo"> Logo</label>
+            <label><input type="checkbox" name="available-material" value="Textos"> Textos</label>
+            <label><input type="checkbox" name="available-material" value="Imágenes"> Imágenes</label>
+            <label><input type="checkbox" name="available-material" value="Redes sociales"> Redes sociales</label>
+            <label><input type="checkbox" name="available-material" value="Identidad visual"> Identidad visual</label>
+            <label><input type="text" name="available-material-other" placeholder="Otro:"></label>
+
+            <h2>🔹 ASPECTOS TÉCNICOS</h2>
+            <label>¿Tiene dominio? <input type="checkbox" name="domain" value="Sí"> Sí <input type="checkbox" name="domain" value="No"> No</label>
+            <label>¿Tiene hosting? <input type="checkbox" name="hosting" value="Sí"> Sí <input type="checkbox" name="hosting" value="No"> No</label>
+            <label>¿Necesita asesoramiento en estos puntos? <input type="checkbox" name="advice" value="Sí"> Sí <input type="checkbox" name="advice" value="No"> No</label>
+            <label for="delivery-date">¿Fecha estimada de entrega?:</label>
+            <input type="date" id="delivery-date">
+            <label for="budget">¿Presupuesto estimado?:</label>
+            <input type="text" id="budget">
+            <label for="references">Referencias de páginas que le gustan:</label>
+            <textarea id="references"></textarea>
+
+            <button type="button" onclick="printForm()">Imprimir como PDF</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
